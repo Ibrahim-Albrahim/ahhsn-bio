@@ -1,0 +1,22 @@
+@import '../scss/vars';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  // height: 100vmax;
+  // background: rgb(37, 40, 79);
+  // background: linear-gradient(0deg, rgb(4, 1, 28) 0%, rgba(43, 76, 131, 1) 66%, rgb(23, 75, 138) 100%);
+  // @include themify($themes) {
+  //   background-color: themed('primaryColor');
+  // }
+  background-color: #222736;
+  
+}

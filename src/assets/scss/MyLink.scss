@@ -1,0 +1,42 @@
+// @use 'vars';
+@import '../scss/vars';
+
+.my-link {
+    // background-color: vars.$primary-color;
+    // border: 1px solid vars.$primary-color;
+    // all: unset;
+    border: 1px solid;
+    @include themify($themes) {
+        background-color: themed('labelsColor');
+        border-color: themed('labelsColor');
+      }
+    display: flex;
+    padding: 1vmax 3vmax;
+    margin-bottom: 1.5vmin;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: transform 250ms;
+    width: 100%;
+
+    &:hover {
+        transform: scale(1.025);
+    }
+
+    .fa-icons {
+        font-size: 2.5vmax;
+        // color: vars.$dark-color;
+        @include themify($themes) {
+            color: themed('textColor');
+          }
+    }
+
+    span {
+        margin: auto;
+        // color: vars.$dark-color;
+        @include themify($themes) {
+            color: themed('textColor');
+          }
+        font-size: 2vmin;
+        font-weight: bold;
+    }
+}

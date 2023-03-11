@@ -1,0 +1,13 @@
+// @use './vars';
+@import '../scss/vars';
+
+.ahhsn-bio {
+  // margin: 0 auto;
+  // text-align: center;
+  padding: 10vmax;
+  min-height: 97vh;
+  border-radius: 1rem;
+  @include themify($themes) {
+    background-color: themed('backgroundColor');
+  }
+}

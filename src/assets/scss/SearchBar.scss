@@ -1,0 +1,76 @@
+// @use './vars';
+@import '../scss/vars';
+
+.search-bar {
+    width: 100%;
+    position: relative;
+    margin-bottom: 36px;
+    text-align: center;
+
+    h4 {
+        font-size: 1.75vmax;
+        margin: 8px;
+        // color: vars.$primary-color;
+        @include themify($themes) {
+            color: themed('textColor');
+          }
+    }
+
+    .search-input {
+        border-radius: 1rem;
+        width: 100%;
+        height: 5vmax;
+        text-align: center;
+        position: relative;
+        font-weight: bold;
+        // border-color: vars.$light-color;
+        @include themify($themes) {
+            // border-color: themed('labelsColor');
+          }
+        font-size: 1.5vmax;
+        // background-color: vars.$primary-color;
+        @include themify($themes) {
+            background-color: themed('textColor');
+          }
+
+        &:focus+span {
+            transform: translatey(250%);
+            // color: vars.$primary-color;
+            @include themify($themes) {
+                color: themed('textColor');
+              }
+        }
+    }
+
+    .fa-search {
+        position: absolute;
+        // color: vars.$dark-color;
+        @include themify($themes) {
+            // background-color: themed('textColor');
+            color: themed('labelsColor');
+          }
+        font-size: 2vmax;
+        top: 68%;
+        right: 2.5vmin;
+        transform: translateY(-50%);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    span {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 59%;
+        font-size: 1vmax;
+        font-weight: bold;
+        pointer-events: none;
+        transition: transform 250ms, color 250ms;
+        @include themify($themes) {
+            color: themed('labelsColor');
+          }
+    }
+
+}
