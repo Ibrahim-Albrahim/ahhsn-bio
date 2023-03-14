@@ -1,0 +1,65 @@
+@import './vars';
+
+.share-section {
+    position: absolute;
+    top: 1vmin;
+    align-self: flex-start;
+    z-index: 3;
+
+    &:hover {
+        .tooltiptext-share {
+            visibility: visible;
+            opacity: 1;
+            top: 105%;
+        }
+    }
+
+    .tooltiptext-share {
+        right: -100%;
+        top: 1rem;
+    }
+
+    .fa-icon {
+        position: relative;
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+
+        font-size: 1.5vmax;
+        transition: color 300ms, transform 300ms;
+
+        &:hover {
+            color: white;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    .tooltiptext {
+        visibility: hidden;
+        text-align: center;
+        opacity: 0;
+        width: 6vmax;
+        pointer-events: none;
+        border: 0.2vmax solid;
+        backdrop-filter: blur(0.5vmax);
+        border-radius: 0.7vmax;
+
+        @include themify($themes) {
+            border-color: themed('labelsColor');
+        }
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+
+        font-weight: 500;
+        text-align: center;
+        padding: 0.25vmax 0;
+        position: absolute;
+        right: -2.5vmax;
+        font-size: 1vmax;
+        transition: opacity 400ms,top 400ms;
+    }
+}
