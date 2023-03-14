@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/scss/MyLink.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faSnapchatSquare, faTiktok, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faSnapchatSquare, faTiktok, faTwitter, faWhatsapp, faWordpress } from '@fortawesome/free-brands-svg-icons'
 import { faStore, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 function MyLink() {
@@ -13,6 +13,7 @@ function MyLink() {
         { text: 'Snapchat | سنابشات',       icon: faSnapchatSquare, href: 'https://www.snapchat.com/add/ahhsnshop' },
         { text: 'TikTok | تيك توك',         icon: faTiktok,         href: 'https://www.tiktok.com/@ahhsnshop' },
         { text: 'Twitter | تويتر',          icon: faTwitter,        href: 'https://twitter.com/ahhsnshop' },
+        { text: 'AHHSN Blog | مدونة احسن',  icon: faWordpress,      href: 'https://ahhsn.com/' },
     ]
     return (
         links.map(link =>
