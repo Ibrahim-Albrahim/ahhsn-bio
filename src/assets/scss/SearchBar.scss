@@ -22,37 +22,56 @@
     text-align: center;
     font-weight: bold;
     border-radius: 1.5vmax;
-    @include themify($themes) {
-      border-color: themed('labelsColor');
-    }
-
     font-size: 1.5vmax;
     background-color: transparent;
-
-    &:focus+span {
-      transform: translatey(-250%);
-
-      @include themify($themes) {
-        color: themed('labelsColor');
+   
+    @include themify($themes) {
+      color: themed('labelsColor');
+      border-color: themed('labelsColor');
+    }
+    &:focus,&:valid {
+      +span {
+        transform: translatey(-250%);
       }
     }
   }
-
-  .fa-search {
+  
+  .fa-search, .fa-spinner {
     position: absolute;
+    font-size: 2vmax;
+    transform: translateY(-50%);
 
     @include themify($themes) {
       color: themed('textColor');
     }
+  }
 
-    font-size: 2vmax;
+  .fa-search {
     top: 76%;
     right: 2.5vmax;
-    transform: translateY(-50%);
 
     &:hover {
       cursor: pointer;
     }
+  }
+
+  .fa-spinner {
+    visibility: hidden;
+    opacity: 0;
+    top: 67.5%;
+    left: 2.5vmax;
+    animation: spinner 1s linear infinite;
+    transition: opacity 250ms;
+  }
+
+  .fa-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @keyframes spinner {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
   }
 
   span {
@@ -70,4 +89,7 @@
     }
   }
 
+  button{
+    all: unset;
+  }
 }
