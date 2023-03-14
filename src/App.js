@@ -20,9 +20,12 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme}`}>
         <div className=' ahhsn-bio'>
-          <Header />
-          <SeachBar />
-          <MyLink />
+          <div className='background' ></div>
+          <div className='content'>
+            <Header />
+            <SeachBar />
+            <MyLink />
+          </div>
         </div>
       </div>
     </ThemeContext.Provider>

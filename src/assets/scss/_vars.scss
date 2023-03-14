@@ -2,15 +2,17 @@ $themes: (
   light: (
     textColor: #25284f,
     labelsColor: #25284f,
-    backgroundColor: #FFF,
-    logoBackground: #FFFFFF,
+    backgroundColor: #dbedf4,
+    backgroundUrl: url('../images/lightBackground.png'),
+    logoBackground: rgba(219, 237, 244, 0.1),
   ),
   dark: (
     textColor: #dbedf4,
     labelsColor: #dbedf4,
-    // backgroundColor: #25284f,
-    backgroundColor: url('../images/background.jpg'),
-    logoBackground: #000000,
+    backgroundColor: #25284f,
+    backgroundUrl: url('../images/darkBackground.png'),
+    // backgroundUrl: url('../images/background.jpg'),
+    logoBackground: rgba(219, 237, 244, 0.5),
   ),
 );
 

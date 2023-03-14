@@ -1,21 +1,44 @@
 @import './vars';
 
 .ahhsn-bio {
-  padding: 10vmax 5vmax;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-
-  @include themify($themes) {
-    background: themed('backgroundColor');
-  }
+  position: relative;
+  overflow: hidden;
 
   * {
     max-width: 600px;
+    z-index: 2;
+  }
+
+  & , .background {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+
+    @include themify($themes) {
+      background: themed('backgroundUrl');
+    }
+  }
+
+  .background {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+    position: absolute;
+    filter: blur(0.5vmin);
+    -webkit-filter: blur(0.5vmin);
+  }
+
+  .content {
+    @include themify($themes) {
+      background: themed('backgroundColor');
+    }
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-inline: 5vmax;
+    padding-top: 5vmax;
   }
 }
