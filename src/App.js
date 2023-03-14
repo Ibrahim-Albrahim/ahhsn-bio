@@ -10,7 +10,7 @@ function App() {
   const isBrowserDefaulDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const getDefaultTheme = () => {
-    const localStorageTheme = localStorage.getItem('default-theme');
+    const localStorageTheme = localStorage.getItem('theme');
     const browserDefault = isBrowserDefaulDark() ? 'dark' : 'light';
     return localStorageTheme || browserDefault;
   };
@@ -18,10 +18,12 @@ function App() {
   const [theme, setTheme] = useState(getDefaultTheme());
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`theme-${theme} ahhsn-bio`}>
-        <Header />
-        <SeachBar />
-        <MyLink />
+      <div className={`theme-${theme}`}>
+        <div className=' ahhsn-bio'>
+          <Header />
+          <SeachBar />
+          <MyLink />
+        </div>
       </div>
     </ThemeContext.Provider>
   );

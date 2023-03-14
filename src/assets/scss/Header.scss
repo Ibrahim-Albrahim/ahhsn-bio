@@ -1,108 +1,104 @@
-// @use '../scss/vars';
-@import '../scss/vars';
+@import './vars';
 
-// .logo {
-//   @include themify($themes) {
-//     background-color: themed('logoBackgroundColor');
-//   }
-//     width: 70vmin;
-//     margin-bottom: 5vmin;
-//     // background-color: vars.$primary-color;
-//     border-radius: 1.5vmax;
-//     padding: 0.5vmax 1vmin;
-//   }
-
-// @import '../styles/theme-variables.scss';
-
-/*Header styles*/
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    // padding: 30px;
-    padding: 2vmax 1vmin;
+    gap: 4px;
+    padding: 1vmax;
+    padding-top: 3vmax;
+    margin-bottom: 3vmin;
     z-index: 99;
+    border-radius: 1.5vmax;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    position: relative;
 
-    box-shadow: 8px 0 25px rgba(0, 0, 0, 0.05);
-    @include themify($themes) {
-        background: themed('logoBackground');
+    img {
+        width: 30vmax;
+        height: auto;
+        margin-bottom: 1vmin;
     }
 
-    .header-content {
+    .toggle-btn-section {
+        position: absolute;
+        top: 1vmax;
+        align-self: flex-end;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        place-items: center;
+        border: 1px solid;
+        border-radius: 1.5vmax;
 
-        img {
-            width: 30vmin;
-            height: auto;
-            margin-bottom: 1vmin;
+        @include themify($themes) {
+            border-color: themed('labelsColor');
         }
 
-        .toggle-btn-section {
-            display: flex;
-            place-items: center;
+        img {
+            margin: auto 4px;
+            width: 2vmax;
+        }
 
-            .toggle-checkbox {
-                justify-content: center;
-                display: inline-flex;
-                align-items: center;
+        .toggle-checkbox {
+            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+
+            .toggle-btn__input {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+            }
+
+            .toggle-btn__input-label {
                 cursor: pointer;
+                text-indent: -9999px;
+                width: 3vmax;
+                height: 1.25vmax;
+                display: block;
+                border-radius: 23px;
+                position: relative;
+                border: none;
+                margin-top: 2px;
 
-                .toggle-btn__input {
-                    height: 0;
-                    width: 0;
-                    visibility: hidden;
+                @include themify($themes) {
+                    background-color: themed('labelsColor');
                 }
 
-                .toggle-btn__input-label {
-                    cursor: pointer;
-                    text-indent: -9999px;
-                    width: 46px;
-                    height: 20px;
-                    display: block;
-                    border-radius: 23px;
-                    position: relative;
-                    border: none;
-                    margin-top: 2px;
-
-                    @include themify($themes) {
-                        background-color: themed('labelsColor');
-                    }
-
-                    &::after {
-                        content: ' ';
-                        position: absolute;
-                        top: 3px;
-                        left: 3px;
-                        width: 14px;
-                        height: 14px;
-                        border-radius: 50%;
-                        transition: 0.3s;
-                        box-shadow: 0 5px 10px rgba(153, 153, 153, 0.4);
-                        background-color: #fff;
-                    }
-                }
-
-                .toggle-btn__input:checked~.toggle-btn__input-label {
-                    &:after {
-                        background: #fff;
-                        left: calc(100% - 3px);
-                        transform: translateX(-100%);
-                    }
-                }
-
-                .toggle-btn__input:checked~.toggle-btn__theme {
-                    &:after {
-                        // theme switch circle background in light theme
-                        background: #fff;
-                        left: calc(100% - 3px);
-                        transform: translateX(-100%);
-                    }
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    top: 0.1vmax;
+                    left: 3px;
+                    width: 1vmax;
+                    height: 1vmax;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                    box-shadow: 0 5px 10px rgba(153, 153, 153, 0.4);
+                    background-color: #fff;
                 }
             }
 
             .toggle-btn__input:checked~.toggle-btn__input-label {
-                background-color: #82deff;
+                &:after {
+                    background: #fff;
+                    left: calc(100% - 3px);
+                    transform: translateX(-100%);
+                }
             }
+
+            .toggle-btn__input:checked~.toggle-btn__theme {
+                &:after {
+                    // theme switch circle background in light theme
+                    background: #fff;
+                    left: calc(100% - 3px);
+                    transform: translateX(-100%);
+                }
+            }
+        }
+
+        .toggle-btn__input:checked~.toggle-btn__input-label {
+            background-color: #25284f;
         }
     }
 }
