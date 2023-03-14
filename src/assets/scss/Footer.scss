@@ -1,0 +1,25 @@
+@import './vars';
+
+footer {
+    padding: 3.5vmax 0;
+    span , a {
+        font-size: 1vmax;
+        text-decoration: none;
+        font-weight: 500;
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+    }
+
+    a{
+        transition: color 250ms;
+        &:hover{
+            @include themify($themes) {
+                color: themed('backgroundColor');
+            }
+        }
+    }
+    .heart{
+        font-size: 1.5vmax;
+    }
+}

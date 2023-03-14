@@ -4,6 +4,7 @@ import MyLink from './components/MyLink';
 import SeachBar from './components/SearchBar';
 import Header from './components/Header';
 import { ThemeContext } from './contexts/bio-context'
+import Footer from './components/Footer';
 
 function App() {
   // Detecting the default theme
@@ -25,6 +26,7 @@ function App() {
             <Header />
             <SeachBar />
             <MyLink />
+            <Footer />
           </div>
         </div>
       </div>
