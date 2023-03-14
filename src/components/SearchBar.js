@@ -9,7 +9,7 @@ function SeachBar() {
     const SubmitSearch = (event) => {
         event.preventDefault()
         let slicedText = searchInput.current.value.split(' ').join('+').toString()
-        const href = 'https://shop.ahhsn.com/catalogsearch/result/?q=' + slicedText;
+        const href = 'https://shop.ahhsn.com/Ar/catalogsearch/result/?q=' + slicedText;
         window.location.href = href;
     }
 
