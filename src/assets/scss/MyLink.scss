@@ -13,7 +13,7 @@
   border-radius: 1.5vmax;
   text-decoration: none;
   transition: transform 250ms;
-  width: 100%;
+  width: 80vw;
 
   &:hover {
     transform: scale(1.025);
@@ -34,7 +34,7 @@
       color: themed('textColor');
     }
 
-    font-size: 2vmin;
+    font-size: 1.5vmax;
     font-weight: bold;
   }
 }
