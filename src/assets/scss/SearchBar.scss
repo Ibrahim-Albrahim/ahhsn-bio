@@ -2,7 +2,7 @@
 
 .search-bar {
   width: 100%;
-  margin-bottom: 5vmin;
+  margin-bottom: 5vmax;
   text-align: center;
   position: relative;
 
@@ -47,7 +47,7 @@
   }
 
   .fa-search {
-    top: 76%;
+    top: 78%;
     right: 2.5vmax;
 
     &:hover {
@@ -58,7 +58,7 @@
   .fa-spinner {
     visibility: hidden;
     opacity: 0;
-    top: 67.5%;
+    top: 70%;
     left: 2.5vmax;
     animation: spinner 1s linear infinite;
     transition: opacity 250ms;
@@ -78,7 +78,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 69%;
+    top: 70%;
     font-size: 1vmax;
     font-weight: bold;
     pointer-events: none;
@@ -87,8 +87,20 @@
     @include themify($themes) {
       color: themed('textColor');
     }
-  }
 
+  }
+  @media only screen and (max-width: 600px) {
+    .fa-search{
+      top: 80%;
+    }
+    .fa-spinner{
+      top: 73%;
+    }
+    span {
+      top: 74%;
+    }
+  }
+  
   button{
     all: unset;
   }

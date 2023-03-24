@@ -1,7 +1,6 @@
 @import './vars';
 
 .ahhsn-bio {
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
 
@@ -10,7 +9,7 @@
     z-index: 2;
   }
 
-  & , .background {
+  .background {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
