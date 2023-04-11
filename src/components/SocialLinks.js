@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/scss/SocialLinks.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faSnapchatSquare, faTiktok, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faSnapchatSquare, faTiktok, faTwitter, faWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons'
 
 function SocialLinks() {
     const links = [
@@ -10,6 +10,7 @@ function SocialLinks() {
         { icon: faSnapchatSquare,   href: 'https://www.snapchat.com/add/ahhsnshop' },
         { icon: faTiktok,           href: 'https://www.tiktok.com/@ahhsnshop' },
         { icon: faTwitter,          href: 'https://twitter.com/ahhsnshop' },
+        { icon: faTelegram,          href: 'https://t.me/ahhsnshop' },
     ]
 
 
