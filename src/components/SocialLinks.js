@@ -17,7 +17,7 @@ function SocialLinks() {
     return (
         <div className="social-links">
             {links.map(link =>
-                <a className="link" href={link.href} key={links.indexOf(link)} target="_blank" rel='noreferrer'>
+                <a className="link" href={link.href} key={links.indexOf(link)} target="_blank" rel='noopener noreferrer'>
                     <FontAwesomeIcon className={link.icon + ' fa-icons'} icon={link.icon} />
                 </a>
             )}
