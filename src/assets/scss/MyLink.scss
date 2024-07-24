@@ -55,3 +55,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .blog-links{
+    flex-direction: column;
+    gap: 0;
+    margin-top: 4vmax;
+  }
+  span{
+    font-size: 1.2vmax!important;
+  }
+}
