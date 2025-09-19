@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/scss/MyLink.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faWordpress } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faStore, faPhone, faLocationArrow, faUser } from '@fortawesome/free-solid-svg-icons'
 
 function MyLink() {
@@ -30,10 +30,10 @@ function MyLink() {
                 <FontAwesomeIcon className='faInstagram fa-icons' icon={faInstagram} />
                 <span>Blog's Instagram | انستقرام المدونة</span>
             </a>
-            <a className="my-link" href='https://ahhsn.com/' key='blog_site' target="_blank" rel='noopener noreferrer'>
+            {/* <a className="my-link" href='https://ahhsn.com/' key='blog_site' target="_blank" rel='noopener noreferrer'>
                 <FontAwesomeIcon className='faWordpress fa-icons' icon={faWordpress} />
                 <span>AHHSN Blog | مدونة احسن</span>
-            </a>
+            </a> */}
         </div>
     </div>
 

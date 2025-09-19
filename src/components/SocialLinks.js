@@ -1,4 +1,3 @@
-import React from 'react'
 import '../assets/scss/SocialLinks.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faSnapchat, faTiktok, faXTwitter, faWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons'

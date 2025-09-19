@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './assets/scss/App.scss';
 import MyLink from './components/MyLink';
 import SeachBar from './components/SearchBar';
 import Header from './components/Header';
 import { ThemeContext } from './contexts/bio-context'
 import Footer from './components/Footer';
+import SocialLinks from './components/SocialLinks';
 
 function App() {
   // Detecting the default theme
@@ -24,6 +25,7 @@ function App() {
           <div className='background' ></div>
           <div className='content'>
             <Header />
+            <SocialLinks />
             <SeachBar />
             <MyLink />
             <Footer />
